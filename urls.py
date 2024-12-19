@@ -46,9 +46,12 @@ urlpatterns = [
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),  # Generate OpenAPI schema
     #path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),  # Swagger UI
     path('new/', lambda request: HttpResponse('New products'), name='new'),
+    path('', views.home_view, name='home'),
+
     #path('har/', lambda request: HttpResponse('Hi'), name='har'),
     #path('index/', lambda request: HttpResponse('Index page'), name='index'),
     #path('hari/', lambda request: JsonResponse({"message": "Hello, World!"}), name='hari'),
+
 
 
     # Swagger URLs
